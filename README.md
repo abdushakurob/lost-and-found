@@ -114,4 +114,16 @@ The database is where all user profiles, reported items, comments, and messages 
 
 * **The Connection Setup (`config/db.php`)**: To read or write information, a file must import the connection script. This script opens a path to the database file `storage/database.sqlite`. If the connection fails, the script displays an error message and stops the application to prevent data corruption.
 * **Automated Creation**: If the database file is missing (such as when launching the app for the first time), the connection script automatically creates the file and sets up the four lists (users, items, comments, and responses).
-* **Cascade Deletes**: The lists are linked together. If a user deletes their account, the database automatically deletes all of their reported items, public comments, and private messages.
+
+### Database Tables and How They Connect
+The database organizes all data into four distinct lists (called tables). Instead of storing everything in one giant document, the system divides the information and connects the records using unique reference numbers called **IDs**.
+
+* **Users Table**: Every time someone registers a new account, they get a unique, permanent identification number (for example, user #14).
+* **Items Table**: Every time someone reports a lost or found object, that item gets its own ID number (for example, item #89). The item record also stores the ID of the user who posted it (using a column called `user_id`). By matching `user_id = 14`, the app knows that user #14 is the person who reported item #89.
+* **Comments Table**: Each public comment gets its own ID. To make sure the comment shows up on the right item, the comment record stores the item's reference number (using `item_id`). To show who wrote the comment, it also stores the writer's reference number (using `user_id`). For example, if a comment is saved with `item_id = 89` and `user_id = 14`, the system knows this comment belongs under item #89 and was written by user #14.
+* **Responses Table**: Each private message gets its own ID. It stores the sender's reference number (using `sender_id`) and the target item's reference number (using `item_id`). When the owner of the item logs in, the app searches this list for any messages matching their item's ID.
+
+### Cascade Deletes (Automatic Cleanup)
+Because all these tables are linked using IDs, deleting a record could leave detached "orphan" logs behind (for example, comments left under a post that no longer exists). 
+
+To prevent this, the database links are configured with a rule called **Cascade Delete**. If a user deletes their account (user #14), the database automatically searches all other tables and deletes every item, public comment, and private message associated with user #14. Similarly, if an item is deleted, all public comments and private replies sent about that specific item are cleaned up instantly. This ensures that the database stays clean and organized.
