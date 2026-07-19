@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login — recov.cv</title>
+  <title>Login — lostandfound</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -43,8 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   <div class="auth-card">
     <div class="auth-logo">
-      <div class="logo-mark">R</div>
-      <h1>recov<span>.cv</span></h1>
+      <a href="/landing.php" class="landing-brand" style="font-size: 24px; display: inline-block; margin-bottom: 8px;">lostandfound</a>
       <p>Sign in to your account</p>
     </div>
 

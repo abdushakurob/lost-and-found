@@ -1,6 +1,6 @@
-# recov.cv — Lost and Found Portal Documentation
+# lostandfound — Lost and Found Portal Documentation
 
-This document explains how the recov.cv application is structured: how the files connect to each other, how data moves through the app, and where everything is stored. It starts with the overall flow, then walks through each part in order.
+This document explains how the lostandfound application is structured: how the files connect to each other, how data moves through the app, and where everything is stored. It starts with the overall flow, then walks through each part in order.
 
 ---
 

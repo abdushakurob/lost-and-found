@@ -7,8 +7,8 @@ $initials   = strtoupper(substr($name_parts[0], 0, 1) . (isset($name_parts[1]) ?
 <aside class="sidebar">
   <div class="sidebar-logo">
     <a href="/pages/dashboard.php">
-      <div class="logo-icon">R</div>
-      <div class="logo-text">recov<span class="cv">.cv</span></div>
+      <div class="logo-icon">L</div>
+      <div class="logo-text">lostandfound</div>
     </a>
   </div>
 

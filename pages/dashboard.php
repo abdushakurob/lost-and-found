@@ -29,7 +29,7 @@ include __DIR__ . '/../includes/sidebar.php';
 <div class="page-header-row">
   <div class="page-header" style="margin-bottom:0">
     <h1>Good to see you, <?php echo htmlspecialchars(explode(' ', $_SESSION['user_name'])[0]); ?></h1>
-    <p>Here's what's happening on recov.cv</p>
+    <p>Here's what's happening on lostandfound</p>
   </div>
   <a href="/pages/post_item.php" class="btn btn-primary">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>

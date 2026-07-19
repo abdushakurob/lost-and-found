@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>recov.cv — Recover what matters</title>
+  <title>lostandfound — Recover what matters</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -12,7 +12,7 @@
 <body class="landing-page-active">
 
   <header class="landing-header">
-    <a href="/landing.php" class="landing-brand">RECOV.CV</a>
+    <a href="/" class="landing-brand">lostandfound</a>
     <nav class="landing-nav-links">
       <a href="#how" class="landing-link-item" style="display: inline-block;">How it works</a>
       <a href="/pages/login.php">Log in</a>
@@ -66,8 +66,8 @@
     </section>
 
     <footer class="landing-footer">
-      <span>&copy; <?php echo date('Y'); ?> recov.cv</span>
-      <div>
+      <span>&copy; <?php echo date('Y'); ?> lostandfound</span>
+-      <div>
         <a href="#">Terms</a>
         <a href="#">Privacy</a>
         <a href="#">Contact</a>
